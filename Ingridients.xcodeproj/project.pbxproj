@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1F929B0D0A700B8BF9C /* OS.swift */; };
+		0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B1FC29B0D3D700B8BF9C /* AQUI */; };
+		0C35B1FF29B12BD800B8BF9C /* IngridientsLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* IngridientsLists.swift */; };
+		0C35B20229B12FFA00B8BF9C /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B20129B12FFA00B8BF9C /* SwiftSoup */; };
+		0C35B20429B130D400B8BF9C /* TescoShampooView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20329B130D400B8BF9C /* TescoShampooView.swift */; };
+		0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20529B1396A00B8BF9C /* Tesco.swift */; };
 		0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */; };
 		0C88DCB129AB9F1E00357CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCB029AB9F1E00357CCB /* ContentView.swift */; };
 		0C88DCB329AB9F2100357CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C88DCB229AB9F2100357CCB /* Assets.xcassets */; };
@@ -14,6 +20,15 @@
 		0C88DCC129AB9F2100357CCB /* IngridientsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCC029AB9F2100357CCB /* IngridientsTests.swift */; };
 		0C88DCCB29AB9F2100357CCB /* IngridientsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */; };
 		0C88DCCD29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCC29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift */; };
+		0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCD929ABA3DA00357CCB /* StringExtension.swift */; };
+		0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */; };
+		0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */; };
+		0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDF29AC34A100357CCB /* CheckerView.swift */; };
+		0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */; };
+		0C88DCE429AC3D0900357CCB /* ConditionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */; };
+		0C9B1C8329BE8FFB003A3D35 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */; };
+		0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8429BE9066003A3D35 /* ProductCard.swift */; };
+		0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C35B1F929B0D0A700B8BF9C /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
+		0C35B1FE29B12BD800B8BF9C /* IngridientsLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsLists.swift; sourceTree = "<group>"; };
+		0C35B20329B130D400B8BF9C /* TescoShampooView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TescoShampooView.swift; sourceTree = "<group>"; };
+		0C35B20529B1396A00B8BF9C /* Tesco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tesco.swift; sourceTree = "<group>"; };
 		0C88DCAB29AB9F1E00357CCB /* Ingridients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ingridients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsApp.swift; sourceTree = "<group>"; };
 		0C88DCB029AB9F1E00357CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +64,15 @@
 		0C88DCC629AB9F2100357CCB /* IngridientsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IngridientsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsUITests.swift; sourceTree = "<group>"; };
 		0C88DCCC29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C88DCD929ABA3DA00357CCB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsSection.swift; sourceTree = "<group>"; };
+		0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorView.swift; sourceTree = "<group>"; };
+		0C88DCDF29AC34A100357CCB /* CheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerView.swift; sourceTree = "<group>"; };
+		0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedAddableListSection.swift; sourceTree = "<group>"; };
+		0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalModifiers.swift; sourceTree = "<group>"; };
+		0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
+		0C9B1C8429BE9066003A3D35 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sainsburys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */,
+				0C35B20229B12FFA00B8BF9C /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +125,19 @@
 		0C88DCAD29AB9F1E00357CCB /* Ingridients */ = {
 			isa = PBXGroup;
 			children = (
+				0C9B1C8129BE8FBC003A3D35 /* Modifiers&Extensions */,
+				0C9B1C8029BE8F83003A3D35 /* StoresView */,
+				0C9B1C7F29BE8F63003A3D35 /* StoresAPI */,
 				0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */,
 				0C88DCB029AB9F1E00357CCB /* ContentView.swift */,
 				0C88DCB229AB9F2100357CCB /* Assets.xcassets */,
 				0C88DCB429AB9F2100357CCB /* Ingridients.entitlements */,
 				0C88DCB529AB9F2100357CCB /* Preview Content */,
+				0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */,
+				0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */,
+				0C88DCDF29AC34A100357CCB /* CheckerView.swift */,
+				0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */,
+				0C35B1F929B0D0A700B8BF9C /* OS.swift */,
 			);
 			path = Ingridients;
 			sourceTree = "<group>";
@@ -129,6 +167,35 @@
 			path = IngridientsUITests;
 			sourceTree = "<group>";
 		};
+		0C9B1C7F29BE8F63003A3D35 /* StoresAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0C35B1FE29B12BD800B8BF9C /* IngridientsLists.swift */,
+				0C35B20529B1396A00B8BF9C /* Tesco.swift */,
+				0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */,
+				0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */,
+			);
+			path = StoresAPI;
+			sourceTree = "<group>";
+		};
+		0C9B1C8029BE8F83003A3D35 /* StoresView */ = {
+			isa = PBXGroup;
+			children = (
+				0C35B20329B130D400B8BF9C /* TescoShampooView.swift */,
+				0C9B1C8429BE9066003A3D35 /* ProductCard.swift */,
+			);
+			path = StoresView;
+			sourceTree = "<group>";
+		};
+		0C9B1C8129BE8FBC003A3D35 /* Modifiers&Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C88DCD929ABA3DA00357CCB /* StringExtension.swift */,
+				0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */,
+			);
+			path = "Modifiers&Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +212,10 @@
 			dependencies = (
 			);
 			name = Ingridients;
+			packageProductDependencies = (
+				0C35B1FC29B0D3D700B8BF9C /* AQUI */,
+				0C35B20129B12FFA00B8BF9C /* SwiftSoup */,
+			);
 			productName = Ingridients;
 			productReference = 0C88DCAB29AB9F1E00357CCB /* Ingridients.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +288,10 @@
 				Base,
 			);
 			mainGroup = 0C88DCA229AB9F1E00357CCB;
+			packageReferences = (
+				0C35B1FB29B0D3D700B8BF9C /* XCRemoteSwiftPackageReference "AQUI" */,
+				0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 0C88DCAC29AB9F1E00357CCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +334,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C35B1FF29B12BD800B8BF9C /* IngridientsLists.swift in Sources */,
+				0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */,
+				0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */,
+				0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */,
+				0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */,
+				0C88DCE429AC3D0900357CCB /* ConditionalModifiers.swift in Sources */,
 				0C88DCB129AB9F1E00357CCB /* ContentView.swift in Sources */,
+				0C9B1C8329BE8FFB003A3D35 /* StoreProtocol.swift in Sources */,
+				0C35B20429B130D400B8BF9C /* TescoShampooView.swift in Sources */,
 				0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */,
+				0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */,
+				0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */,
+				0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */,
+				0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */,
+				0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +515,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -465,8 +553,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -612,6 +700,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C35B1FB29B0D3D700B8BF9C /* XCRemoteSwiftPackageReference "AQUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AlanQuatermain/AQUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C35B1FC29B0D3D700B8BF9C /* AQUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C35B1FB29B0D3D700B8BF9C /* XCRemoteSwiftPackageReference "AQUI" */;
+			productName = AQUI;
+		};
+		0C35B20129B12FFA00B8BF9C /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C88DCA329AB9F1E00357CCB /* Project object */;
 }
