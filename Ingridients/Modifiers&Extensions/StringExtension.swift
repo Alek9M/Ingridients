@@ -105,3 +105,17 @@ extension Double {
         return stringValue
     }
 }
+
+extension [String] {
+    func appending(_ string: String) -> [String] {
+        var array = self
+        array.append(string)
+        return array
+    }
+    
+    func appending(_ stringArray: [String]) -> [String] {
+        var array = self
+        array.append(contentsOf: stringArray)
+        return array
+    }
+}

@@ -16,19 +16,19 @@ class Tesco: Store, StoreProtocol {
     static private let pagesButtonsClass = "pagination--page-selector-wrapper"
     static private let gridClass = "product-list grid"
     
-//    @Published var productsToLoad = 0
-//    @Published var productsLoaded = 0
+    //    @Published var productsToLoad = 0
+    //    @Published var productsLoaded = 0
     var progress: Float {
         Float(productsLoaded) / Float(productsToLoad)
     }
     
-//    @Published private(set) var products: [Product] = []
-//    
-//    private var loaded: [URL] = []
-//    
-//    init() {
-//        
-//    }
+    //    @Published private(set) var products: [Product] = []
+    //
+    //    private var loaded: [URL] = []
+    //
+    //    init() {
+    //
+    //    }
     
     static internal func url(forProducts: Products) -> URL? {
         switch forProducts {
@@ -67,16 +67,14 @@ class Tesco: Store, StoreProtocol {
                 
                 for url in self.extractPagesURLs(from: pageButtons) {
                     if !self.loaded.contains(url) {
-//                        DispatchQueue.global().async {
-                            self.load(page: url)
-//                        }
+//                        self.load(page: url)
                     }
                 }
                 
                 for product in products {
-//                    DispatchQueue.global().async {
-                        self.addProduct(product)
-//                    }
+                    //                    DispatchQueue.global().async {
+                    self.addProduct(product)
+                    //                    }
                 }
             }
         }

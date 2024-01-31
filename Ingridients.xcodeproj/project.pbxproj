@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1F929B0D0A700B8BF9C /* OS.swift */; };
 		0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B1FC29B0D3D700B8BF9C /* AQUI */; };
-		0C35B1FF29B12BD800B8BF9C /* IngridientsLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* IngridientsLists.swift */; };
+		0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */; };
 		0C35B20229B12FFA00B8BF9C /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B20129B12FFA00B8BF9C /* SwiftSoup */; };
-		0C35B20429B130D400B8BF9C /* TescoShampooView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20329B130D400B8BF9C /* TescoShampooView.swift */; };
+		0C35B20429B130D400B8BF9C /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20329B130D400B8BF9C /* ProductsView.swift */; };
 		0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20529B1396A00B8BF9C /* Tesco.swift */; };
 		0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */; };
 		0C88DCB129AB9F1E00357CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCB029AB9F1E00357CCB /* ContentView.swift */; };
@@ -29,6 +29,9 @@
 		0C9B1C8329BE8FFB003A3D35 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */; };
 		0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8429BE9066003A3D35 /* ProductCard.swift */; };
 		0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */; };
+		0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8929C315BD003A3D35 /* Unit.swift */; };
+		0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */; };
+		0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8D29C31602003A3D35 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,8 @@
 
 /* Begin PBXFileReference section */
 		0C35B1F929B0D0A700B8BF9C /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
-		0C35B1FE29B12BD800B8BF9C /* IngridientsLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsLists.swift; sourceTree = "<group>"; };
-		0C35B20329B130D400B8BF9C /* TescoShampooView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TescoShampooView.swift; sourceTree = "<group>"; };
+		0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridients.swift; sourceTree = "<group>"; };
+		0C35B20329B130D400B8BF9C /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		0C35B20529B1396A00B8BF9C /* Tesco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tesco.swift; sourceTree = "<group>"; };
 		0C88DCAB29AB9F1E00357CCB /* Ingridients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ingridients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsApp.swift; sourceTree = "<group>"; };
@@ -73,6 +76,9 @@
 		0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		0C9B1C8429BE9066003A3D35 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sainsburys.swift; sourceTree = "<group>"; };
+		0C9B1C8929C315BD003A3D35 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStore.swift; sourceTree = "<group>"; };
+		0C9B1C8D29C31602003A3D35 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		0C88DCAD29AB9F1E00357CCB /* Ingridients */ = {
 			isa = PBXGroup;
 			children = (
+				0C9B1C8829C315AB003A3D35 /* Model */,
 				0C9B1C8129BE8FBC003A3D35 /* Modifiers&Extensions */,
 				0C9B1C8029BE8F83003A3D35 /* StoresView */,
 				0C9B1C7F29BE8F63003A3D35 /* StoresAPI */,
@@ -170,10 +177,10 @@
 		0C9B1C7F29BE8F63003A3D35 /* StoresAPI */ = {
 			isa = PBXGroup;
 			children = (
-				0C35B1FE29B12BD800B8BF9C /* IngridientsLists.swift */,
 				0C35B20529B1396A00B8BF9C /* Tesco.swift */,
 				0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */,
 				0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */,
+				0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */,
 			);
 			path = StoresAPI;
 			sourceTree = "<group>";
@@ -181,7 +188,7 @@
 		0C9B1C8029BE8F83003A3D35 /* StoresView */ = {
 			isa = PBXGroup;
 			children = (
-				0C35B20329B130D400B8BF9C /* TescoShampooView.swift */,
+				0C35B20329B130D400B8BF9C /* ProductsView.swift */,
 				0C9B1C8429BE9066003A3D35 /* ProductCard.swift */,
 			);
 			path = StoresView;
@@ -194,6 +201,16 @@
 				0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */,
 			);
 			path = "Modifiers&Extensions";
+			sourceTree = "<group>";
+		};
+		0C9B1C8829C315AB003A3D35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C9B1C8929C315BD003A3D35 /* Unit.swift */,
+				0C9B1C8D29C31602003A3D35 /* Product.swift */,
+				0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,20 +351,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C35B1FF29B12BD800B8BF9C /* IngridientsLists.swift in Sources */,
+				0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */,
 				0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */,
 				0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */,
 				0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */,
 				0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */,
+				0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */,
 				0C88DCE429AC3D0900357CCB /* ConditionalModifiers.swift in Sources */,
 				0C88DCB129AB9F1E00357CCB /* ContentView.swift in Sources */,
 				0C9B1C8329BE8FFB003A3D35 /* StoreProtocol.swift in Sources */,
-				0C35B20429B130D400B8BF9C /* TescoShampooView.swift in Sources */,
+				0C35B20429B130D400B8BF9C /* ProductsView.swift in Sources */,
 				0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */,
+				0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */,
 				0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */,
 				0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */,
 				0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */,
 				0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */,
+				0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */,
 				0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

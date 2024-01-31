@@ -37,7 +37,7 @@ struct ContentView: View {
                 case .CheckAgainst:
                     CheckerView()
                 case .TescoShampoo:
-                    TescoShampooView()
+                    ProductsView()
                 }
             }
             .if(OS.isMacOS) {
