@@ -35,13 +35,11 @@ struct IngridientsSection: View {
                     $0.font(.headline)
                 }
             Spacer()
-            Button(action: { withAnimation { detailed.toggle() } }) {
-                Label(detailed ? "hide" : "show", systemImage: detailed ? "chevron.down" : "chevron.right")
-                    .labelStyle(.iconOnly)
-            }
-            .if(OS.isMacOS) {
-                $0
-                    .buttonStyle(.borderless)
+            if !OS.isMacOS {
+                Button(action: { withAnimation { detailed.toggle() } }) {
+                    Label(detailed ? "hide" : "show", systemImage: detailed ? "chevron.down" : "chevron.right")
+                        .labelStyle(.iconOnly)
+                }
             }
         }
     }

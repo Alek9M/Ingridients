@@ -22,6 +22,8 @@ extension String {
         return self
 //            .components(separatedBy: separators)
 //            .fil
+            .lowercased()
+            .trimmingPrefix("INGREDIENTS:".lowercased())
             .components(separatedBy: ",")
             .filter { !$0.isEmpty }
             .map { $0.presentable }
