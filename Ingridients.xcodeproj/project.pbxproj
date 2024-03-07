@@ -15,7 +15,6 @@
 		0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20529B1396A00B8BF9C /* Tesco.swift */; };
 		0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */; };
 		0C88DCB129AB9F1E00357CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCB029AB9F1E00357CCB /* ContentView.swift */; };
-		0C88DCB329AB9F2100357CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C88DCB229AB9F2100357CCB /* Assets.xcassets */; };
 		0C88DCB729AB9F2100357CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C88DCB629AB9F2100357CCB /* Preview Assets.xcassets */; };
 		0C88DCC129AB9F2100357CCB /* IngridientsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCC029AB9F2100357CCB /* IngridientsTests.swift */; };
 		0C88DCCB29AB9F2100357CCB /* IngridientsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */; };
@@ -34,6 +33,8 @@
 		0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8D29C31602003A3D35 /* Product.swift */; };
 		0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */; };
 		0CF330C92B9A1FDD00384EF3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */; };
+		0CF330CD2B9A2ED900384EF3 /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330CC2B9A2ED900384EF3 /* OpenAI.swift */; };
+		0CF330D12B9A346B00384EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF330D02B9A346B00384EF3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +62,6 @@
 		0C88DCAB29AB9F1E00357CCB /* Ingridients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ingridients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsApp.swift; sourceTree = "<group>"; };
 		0C88DCB029AB9F1E00357CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0C88DCB229AB9F2100357CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C88DCB429AB9F2100357CCB /* Ingridients.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ingridients.entitlements; sourceTree = "<group>"; };
 		0C88DCB629AB9F2100357CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C88DCBC29AB9F2100357CCB /* IngridientsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IngridientsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +83,8 @@
 		0C9B1C8D29C31602003A3D35 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0CF330CC2B9A2ED900384EF3 /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		0CF330D02B9A346B00384EF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,13 +137,14 @@
 		0C88DCAD29AB9F1E00357CCB /* Ingridients */ = {
 			isa = PBXGroup;
 			children = (
+				0CF330CB2B9A2EBD00384EF3 /* AI */,
 				0C9B1C8829C315AB003A3D35 /* Model */,
 				0C9B1C8129BE8FBC003A3D35 /* Modifiers&Extensions */,
 				0C9B1C8029BE8F83003A3D35 /* StoresView */,
 				0C9B1C7F29BE8F63003A3D35 /* StoresAPI */,
 				0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */,
 				0C88DCB029AB9F1E00357CCB /* ContentView.swift */,
-				0C88DCB229AB9F2100357CCB /* Assets.xcassets */,
+				0CF330D02B9A346B00384EF3 /* Assets.xcassets */,
 				0C88DCB429AB9F2100357CCB /* Ingridients.entitlements */,
 				0C88DCB529AB9F2100357CCB /* Preview Content */,
 				0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */,
@@ -217,6 +220,14 @@
 				0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0CF330CB2B9A2EBD00384EF3 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				0CF330CC2B9A2ED900384EF3 /* OpenAI.swift */,
+			);
+			path = AI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 			packageReferences = (
 				0C35B1FB29B0D3D700B8BF9C /* XCRemoteSwiftPackageReference "AQUI" */,
 				0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				0CF330CA2B9A2E3D00384EF3 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0C88DCAC29AB9F1E00357CCB /* Products */;
 			projectDirPath = "";
@@ -331,8 +343,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF330D12B9A346B00384EF3 /* Assets.xcassets in Resources */,
 				0C88DCB729AB9F2100357CCB /* Preview Assets.xcassets in Resources */,
-				0C88DCB329AB9F2100357CCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +384,7 @@
 				0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */,
 				0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */,
 				0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */,
+				0CF330CD2B9A2ED900384EF3 /* OpenAI.swift in Sources */,
 				0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */,
 				0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */,
 				0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */,
@@ -744,6 +757,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
+			};
+		};
+		0CF330CA2B9A2E3D00384EF3 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
