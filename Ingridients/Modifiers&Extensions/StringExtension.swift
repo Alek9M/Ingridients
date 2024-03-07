@@ -17,6 +17,10 @@ extension String: Identifiable {
 
 extension String {
     
+    public var fromCloud: String {
+        NSUbiquitousKeyValueStore.default.string(forKey: self) ?? ""
+    }
+    
     public var parsedIngridients: [String] {
 //        let separators: CharacterSet = .newlines.union(.punctuationCharacters)
         return self

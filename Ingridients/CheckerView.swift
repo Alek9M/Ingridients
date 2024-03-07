@@ -10,6 +10,8 @@ import SwiftUI
 struct CheckerView: View {
     
     @State private var ingridientsRaw = ""
+    @State private var settings = false
+    
     
     private var content: some View {
         Group {
@@ -34,19 +36,27 @@ struct CheckerView: View {
     }
     
     var body: some View {
-        Group {
-            if OS.isMacOS {
-                ScrollView {
-                    content
-                    Spacer()
-                }
-            } else {
-                Form {
-                    content
+        NavigationStack {
+            Group {
+                if OS.isMacOS {
+                    ScrollView {
+                        content
+                        Spacer()
+                    }
+                } else {
+                    Form {
+                        content
+                    }
                 }
             }
+            .if(!OS.isMacOS){
+                $0
+                    .navigationTitle("Check against")
+                    .settings(areShown: $settings)
+            }
+            
         }
-        .navigationTitle("Check against")
+        
     }
     
     private func found(_ ingridient: String) -> Bool {

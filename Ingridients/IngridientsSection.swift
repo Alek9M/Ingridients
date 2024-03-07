@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IngridientsSection: View {
     
-    let title: String
+    let title: LocalizedStringKey
     
     @Binding var ingridientsRaw: String
     

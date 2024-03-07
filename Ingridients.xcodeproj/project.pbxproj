@@ -32,6 +32,8 @@
 		0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8929C315BD003A3D35 /* Unit.swift */; };
 		0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */; };
 		0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8D29C31602003A3D35 /* Product.swift */; };
+		0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */; };
+		0CF330C92B9A1FDD00384EF3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		0C9B1C8929C315BD003A3D35 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStore.swift; sourceTree = "<group>"; };
 		0C9B1C8D29C31602003A3D35 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				0C88DCDF29AC34A100357CCB /* CheckerView.swift */,
 				0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */,
 				0C35B1F929B0D0A700B8BF9C /* OS.swift */,
+				0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */,
 			);
 			path = Ingridients;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				0C88DCD929ABA3DA00357CCB /* StringExtension.swift */,
 				0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */,
+				0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */,
 			);
 			path = "Modifiers&Extensions";
 			sourceTree = "<group>";
@@ -354,7 +360,9 @@
 				0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */,
 				0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */,
 				0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */,
+				0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */,
 				0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */,
+				0CF330C92B9A1FDD00384EF3 /* SettingsView.swift in Sources */,
 				0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */,
 				0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */,
 				0C88DCE429AC3D0900357CCB /* ConditionalModifiers.swift in Sources */,

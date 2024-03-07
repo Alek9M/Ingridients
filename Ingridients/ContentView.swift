@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var settings = false
+    
     var body: some View {
         TabView {
             //            NavigationStack {
@@ -21,17 +23,23 @@ struct ContentView: View {
                     .tabItem {
                         Label("Check", systemImage: "checklist")
                     }
+                
             }
             .if(OS.isMacOS) {
                 $0
                     .padding()
             }
             
+            
+            
             //                ProductsView()
             //                    .tabItem {
             //                        Label("Compare", systemImage: "checklist")
             //                    }
             //            }
+        }
+        .if(OS.isMacOS) {
+            $0.settings(areShown: $settings)
         }
     }
     
