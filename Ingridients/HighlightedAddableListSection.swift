@@ -33,7 +33,7 @@ struct HighlightedAddableListSection: View {
             
             
             Button("Add", action: { addIngridient() })
-            Button("Shampoo avoid", action: { ingridients = Ingridients.db[.Shampoo]?.reduce([], { $0.appending($1.array) }) ?? [] })
+//            Button("Shampoo avoid", action: { ingridients = Ingridients.db[.Shampoo]?.reduce([], { $0.appending($1.array) }) ?? [] })
         }
     }
     

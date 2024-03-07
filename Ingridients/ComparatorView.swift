@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ComparatorView: View {
     
-    @State private var ingridientsAraw = ""
-    @State private var ingridientsBraw = ""
+    @State private var ingridientsAraw = "INGREDIENTS:Basil (48%), Sunflower Oil, Grana Padano Cheese (Cows' Milk,  Contains Preservative: Egg Lysozyme)(5%), Cashew Nuts (5%), Glucose, Potato Flakes, Vegetable Fibre, Salt, Acidity Regulator: Lactic Acid; Pecorino Romano Cheese (Sheep's Milk) (0.5%), Extra Virgin Olive Oil, Pine Nuts (0.5%), Garlic Powder, Antioxidant: Ascorbic Acid."
+    @State private var ingridientsBraw = "INGREDIENTS: Basil (47%), Sunflower Oil, Grana Padano Cheese (5%) [Grana Padano Cheese (Milk), Preservative (Egg Lysozyme)], Yogurt (Milk), Cashew Nut (5%), Extra Virgin Olive Oil, Sugar, Pecorino Romano Cheese (Milk), Pea Fibre, Salt, Pine Nuts (1%), Acidity Regulator (Lactic Acid), Garlic Powder."
     
     private var same: [String] {
         ingridientsAraw.intersect(with: ingridientsBraw)
@@ -24,85 +24,75 @@ struct ComparatorView: View {
         ingridientsAraw.isEmpty ? [] : ingridientsBraw.notFound(within: ingridientsAraw)
     }
     
-    private var content: some View {
+    private func section(title: String, ingridients: [String]) -> some View {
+        return Section(title) {
+            ForEach(ingridients) { ingridient in
+                Text(ingridient.presentable)
+            }
+            .if(OS.isMacOS) {
+                $0
+                    .padding(.horizontal)
+            }
+        }
+    }
+    
+    private var mobile: some View {
         Group {
             
             IngridientsSection(title: "A", ingridientsRaw: $ingridientsAraw)
             IngridientsSection(title: "B", ingridientsRaw: $ingridientsBraw)
             
             if same.count > 0 {
-                Section("same") {
-                    ForEach(same) { ingridient in
-                        Text(ingridient.presentable)
-                    }
-                }
+                section(title: "same", ingridients: same)
             }
             
             if uniqueToA.count > 0 {
-                Section("different in a") {
-                    ForEach(uniqueToA) { ingridient in
-                        Text(ingridient.presentable)
-                    }
-                }
+                section(title: "different in a", ingridients: uniqueToA)
             }
             
             if uniqueToB.count > 0 {
-                Section("different in b") {
-                    ForEach(uniqueToB) { ingridient in
-                        Text(ingridient.presentable)
+                section(title: "different in b", ingridients: uniqueToB)
+            }
+        }
+    }
+    
+    private var computer: some View {
+        ScrollView {
+            VStack {
+                HStack {
+                    IngridientsSection(title: "A", ingridientsRaw: $ingridientsAraw)
+                    
+                    VStack(alignment: .leading) {
+                        section(title: "same", ingridients: same)
+                            .orSpacer(same.count > 0)
+                            .fixedSize()
+                    }
+                    
+                    IngridientsSection(title: "B", ingridientsRaw: $ingridientsBraw)
+                }
+                HStack {
+                    VStack(alignment: .leading) {
+                        section(title: "different in a", ingridients: uniqueToA)
+                            .orSpacer(uniqueToA.count > 0)
+                            .fixedSize()
+                    }
+                    VStack(alignment: .leading) {
+                        section(title: "different in b", ingridients: uniqueToB)
+                            .orSpacer(uniqueToB.count > 0)
+                            .fixedSize()
                     }
                 }
             }
-            
-            
         }
     }
     
     var body: some View {
         Group {
             if OS.isMacOS {
-                ScrollView {
-                    VStack {
-                        HStack {
-                            IngridientsSection(title: "A", ingridientsRaw: $ingridientsAraw)
-                            
-                            VStack {
-                                Section("same") {
-                                    ForEach(same) { ingridient in
-                                        Text(ingridient.presentable)
-                                    }
-                                }
-                                .orSpacer(same.count > 0)
-                            .fixedSize()
-                            }
-                            
-                            IngridientsSection(title: "B", ingridientsRaw: $ingridientsBraw)
-                        }
-                        HStack {
-                            VStack {
-                                Section("different in a") {
-                                    ForEach(uniqueToA) { ingridient in
-                                        Text(ingridient.presentable)
-                                    }
-                                }
-                                .orSpacer(uniqueToA.count > 0)
-                            .fixedSize()
-                            }
-                            VStack {
-                                Section("different in b") {
-                                    ForEach(uniqueToB) { ingridient in
-                                        Text(ingridient.presentable)
-                                    }
-                                }
-                                .orSpacer(uniqueToB.count > 0)
-                            .fixedSize()
-                            }
-                        }
-                    }
-                }
+                computer
             } else {
                 Form {
-                    content
+                    mobile
                 }
             }
         }
