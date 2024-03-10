@@ -27,7 +27,7 @@ extension String {
 //            .components(separatedBy: separators)
 //            .fil
             .lowercased()
-            .trimmingPrefix("INGREDIENTS:".lowercased())
+//            .trimmingPrefix("INGREDIENTS:".lowercased())
             .components(separatedBy: ",")
             .filter { !$0.isEmpty }
             .map { $0.presentable }

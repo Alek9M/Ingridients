@@ -95,7 +95,7 @@ class Ingridients {
     }
     
     init(raw: String) {
-        self.raw = String(raw.trimmingPrefix("Ingridients: "))
+        self.raw = String(raw.lowercased().trimmingPrefix("Ingridients:".lowercased()))
         array = raw.parsedIngridients
     }
 }

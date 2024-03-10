@@ -9,15 +9,38 @@ import SwiftUI
 
 struct IngridientsSection: View {
     
+    private static let queue = DispatchQueue.global(qos: .utility)
+    
     let title: LocalizedStringKey
     
     @Binding var ingridientsRaw: String
     
     @State private var detailed = false
+    @State private var works: [DispatchWorkItem] = []
+    @State private var ai = try? AI()
+    @State private var aiRaw = ""
     
     private var content: some View {
         Group {
             TextEditor(text: $ingridientsRaw)
+                .onChange(of: ingridientsRaw) { newRaw in
+                    works.forEach({$0.cancel()})
+                    if (aiRaw != ingridientsRaw) {
+                        let work = DispatchWorkItem {
+                            Task {
+                                let result = try? await ai?.parseIngridients(ingridientsRaw)
+                                if let aiRaw = result?.map(\.ingredient).reduce("", {$0 + "," + $1}), !aiRaw.isEmpty {
+                                    DispatchQueue.main.async {
+                                        ingridientsRaw = aiRaw
+                                        self.aiRaw = aiRaw
+                                    }
+                                }
+                            }
+                        }
+                        IngridientsSection.queue.asyncAfter(deadline: .now() + 2, execute: work)
+                    }
+                    works = works.filter({!$0.isCancelled})
+                }
             
             if detailed {
                 ForEach(ingridientsRaw.parsedIngridients) { ingridient in
