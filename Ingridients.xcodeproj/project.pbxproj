@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A64FA2B9F64C000000641 /* Ingridient.swift */; };
 		0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1F929B0D0A700B8BF9C /* OS.swift */; };
 		0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B1FC29B0D3D700B8BF9C /* AQUI */; };
 		0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0A64FA2B9F64C000000641 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		0C35B1F929B0D0A700B8BF9C /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
 		0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridients.swift; sourceTree = "<group>"; };
 		0C35B20329B130D400B8BF9C /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				0C9B1C8929C315BD003A3D35 /* Unit.swift */,
 				0C9B1C8D29C31602003A3D35 /* Product.swift */,
 				0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */,
+				0C0A64FA2B9F64C000000641 /* Ingridient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			files = (
 				0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */,
 				0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */,
+				0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */,
 				0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */,
 				0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */,
 				0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */,

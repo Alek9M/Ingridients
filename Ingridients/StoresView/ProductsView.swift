@@ -17,9 +17,9 @@ struct ProductsView: View {
         ScrollView {
             ProgressView(value: store.progress)
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 200))], spacing: 40) {
-                ForEach(store.products.sorted(by: lessAvoid)) { product in
-                    ProductCard(product: product)
-                }
+//                ForEach(store.products.sorted(by: lessAvoid)) { product in
+//                    ProductCard(product: product)
+//                }
             }
         }
         .onAppear {
@@ -36,9 +36,9 @@ struct ProductsView: View {
         }
     }
     
-    func lessAvoid(_ a: Product, _ b: Product) -> Bool {
-        return a.ingridients.check(.Shampoo, for: .Bad).count < b.ingridients.check(.Shampoo, for: .Bad).count
-    }
+//    func lessAvoid(_ a: Product, _ b: Product) -> Bool {
+//        return a.ingridients.check(.Shampoo, for: .Bad).count < b.ingridients.check(.Shampoo, for: .Bad).count
+//    }
 }
 
 struct ProductsView_Previews: PreviewProvider {

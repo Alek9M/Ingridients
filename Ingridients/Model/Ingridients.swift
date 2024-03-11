@@ -8,55 +8,6 @@
 import Foundation
 import SwiftData
 
-@Model
-class Ingridient {
-    
-    enum Category: Codable {
-        case Good
-        case Bad
-        case Unknown
-    }
-    
-    enum Found: Codable {
-        case Whole
-        case Prefix
-        case Postfix
-        case Unknown
-    }
-    
-    enum Effects: Codable {
-        case Health
-        case Environment
-        case Unknown
-    }
-    
-    let title: String
-    let alsoKnownAs: [String]
-    let about: String
-    let found: Found
-    let effect: Effects
-    let category: Category
-    
-    var array: [String] {
-        var all = alsoKnownAs
-        all.append(title)
-        return all
-    }
-    
-    init(title: String, alsoKnownAs: [String] = [], description: String = "", found: Found = .Unknown, effect: Effects = .Unknown, category: Category = .Unknown) {
-        self.title = title
-        self.alsoKnownAs = alsoKnownAs
-        self.about = description
-        self.found = found
-        self.effect = effect
-        self.category = category
-    }
-    
-    func equals(_ ingridient: String) -> Bool {
-        title.contains(ingridient) || alsoKnownAs.contains(where: { $0.contains(ingridient) })
-    }
-    
-}
 
 @Model
 class Ingridients: ObservableObject {
@@ -91,15 +42,16 @@ class Ingridients: ObservableObject {
     
     var raw: String
     var array: [String] {
-        raw
+        Ingridients.rawProcessing(raw)
             .lowercased()
             .components(separatedBy: ",")
+            .compactMap { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
             .map { $0.presentable }
     }
     var aiRaw: String? = nil
     
-    func check(_ product: Products, for category: Ingridient.Category) -> [String] {
+    func check(_ product: Products) -> [String] {
         return array
 //            .filter { ingridient in
 //            Ingridients.db[product]?.filter({ $0.category == category })
@@ -121,9 +73,9 @@ class Ingridients: ObservableObject {
         return array.filter { !elements.contains($0) }.map({ Ingridient(title: $0) })
     }
     
-//    private static func rawProcessing(_ raw: String) -> String {
-//        String(raw.lowercased().trimmingPrefix("ingridients:"))
-//    }
+    private static func rawProcessing(_ raw: String) -> String {
+        String(raw.lowercased().trimmingPrefix("ingridients:"))
+    }
     
     func same(as raw: String) -> Bool {
         self.raw == raw // Ingridients.rawProcessing(raw)
