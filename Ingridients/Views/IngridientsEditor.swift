@@ -11,16 +11,16 @@ struct IngridientsEditor: View {
     
     let title: LocalizedStringKey
     
-    @Binding var ingridients: Ingridients
+    @ObservedObject var ingridients: Ingridients
     
     @State private var detailed = false
     
     private var content: some View {
         Group {
             TextEditor(text: $ingridients.raw)
-                .onChange(of: ingridients.raw) { newRaw in
-                    
-                }
+//                .onChange(of: ingridients) { newRaw in
+//                    
+//                }
             
             if detailed {
                 ForEach(ingridients.array) { ingridient in

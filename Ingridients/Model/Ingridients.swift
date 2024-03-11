@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Ingridients {
+class Ingridients: ObservableObject {
     
     //    static let db = [
     //        Products.Shampoo : """
@@ -42,12 +42,11 @@ class Ingridients {
     private var _raw: String
     
     @Transient
-    private var works: [DispatchWorkItem] = []
+    private(set) var works: [DispatchWorkItem] = []
     @Transient
     private static let queue = DispatchQueue.global(qos: .utility)
     @Transient
-    @Published
-    var thinking = false
+    private(set) var isThinking = false
     
     var raw: String {
         set {
@@ -56,20 +55,17 @@ class Ingridients {
             
             ai = []
             
+            guard let sharedAI = AI.shared else { return }
+            isThinking = true
+            
             
             let work = DispatchWorkItem {
                 Task {
+                    guard let result = try? await sharedAI.parseIngridients(newValue) else { return }
                     DispatchQueue.main.async {
-                        self.thinking = true
-                        self._raw.append(" ")
-                    }
-                    
-                    guard let result = try? await AI.shared?.parseIngridients(newValue) else { return }
-                    
-                    DispatchQueue.main.async {
-                        self.ai = result.compactMap{ Ingridient(title: $0.ingredient, percentage: $0.percentage, category: $0.category, subingredients: []) }
-                        self._raw.append(" ")
-                        self.thinking = false
+                        self.ai = result.compactMap{ $0.objectified() }
+                        self.isThinking = false
+                        self.objectWillChange.send()
                     }
                 }
             }
@@ -96,8 +92,7 @@ class Ingridients {
     }
     
     @Transient
-    @Published
-    @Relationship(deleteRule: .nullify) var ai: [Ingridient] = []
+    var ai: [Ingridient] = []
     
     func check(_ product: Products) -> [String] {
         return array

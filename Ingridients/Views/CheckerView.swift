@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CheckerView: View {
     
-    @State private var ingridients = Ingridients(raw: "")
+    @ObservedObject private var ingridients = Ingridients(raw: "")
     @State private var settings = false
     
     
     private var content: some View {
         Group {
-            IngridientsEditor(title: "Ingridients", ingridients: $ingridients)
+            IngridientsEditor(title: "Ingridients", ingridients: ingridients)
             
             if OS.isMacOS{
                 HStack {

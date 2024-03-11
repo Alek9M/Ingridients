@@ -23,4 +23,19 @@ public extension View {
                 SettingsView()
             })
     }
+    
+    @ViewBuilder func progress(isOn: Bool) -> some View {
+        self
+            .toolbar {
+                ToolbarItem {
+                    if isOn {
+                        ProgressView()
+                          .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                          .if(OS.isMacOS) {
+                              $0.scaleEffect(0.6, anchor: .center)
+                          }
+                    }
+                }
+            }
+    }
 }

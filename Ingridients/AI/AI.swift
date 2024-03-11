@@ -35,63 +35,63 @@ class AI {
 You are an ingridients parser. The text is scaned from picture so some letters might not be recognised correctly or at all, fix those. Ignore parts that got scanned along but clearly don't belong in an ingridients list. Return a json such so that given a string
 *INGREDIENTS: Basil (47%), Sunflower Oil, Grana Padano Cheese (5%) [Grana Padano Cheese (Milk), Preservative (Egg Lysozyme)], Yogurt (Milk), Cashew Nut (5%), Extra Virgin Olive Oil, Sugar, Pecorino Romano Cheese (Milk), Acidity Regulator (Lactic Acid), Antioxidant: Ascorbic Acid.*
  you return
-[
+{"ingredients": [
  {
- "ingridient": "Basil",
+ "ingredient": "Basil",
  "percentage": 47,
  "category": "Herb",
  "origin": "Basil (47%)"
  },
  {
- "ingridient": "Sunflower Oil",
+ "ingredient": "Sunflower Oil",
  "category": "Oil",
  "origin": "Sunflower Oil"
  },
  {
- "ingridient": "Grana Padano",
+ "ingredient": "Grana Padano",
  "percentage": 5,
  "category": "Cheese",
  "subingridients": [
  {
- "ingridient": "Grana Padano",
+ "ingredient": "Grana Padano",
  "category": "Milk"
  },
  {
- "ingridient": "Egg Lysozyme",
+ "ingredient": "Egg Lysozyme",
  "category": "Preservative"
  }
  ],
  origin: "Grana Padano Cheese (5%) [Grana Padano Cheese (Milk), Preservative (Egg Lysozyme)]"
  },
  {
- "ingridient": "Yogurt",
+ "ingredient": "Yogurt",
  "category": "Milk"
  },
  {
- "ingridient": "Cashew",
+ "ingredient": "Cashew",
  "percentage": 5,
  "category": "Nut"
  },
  {
- "ingridient": "Extra Virgin Olive Oil, Sugar, Pecorino Romano Cheese (Milk)",
+ "ingredient": "Extra Virgin Olive Oil, Sugar, Pecorino Romano Cheese (Milk)",
  "category": "Oil"
  },
  {
- "ingridient": "Sugar"
+ "ingredient": "Sugar"
  },
  {
- "ingridient": "Pecorino Romano",
+ "ingredient": "Pecorino Romano",
  "category": "Cheese"
  },
  {
- "ingridient": "Lactic Acid",
+ "ingredient": "Lactic Acid",
  "category": "Acidity Regulator"
  },
  {
- "ingridient": "Ascorbic Acid",
+ "ingredient": "Ascorbic Acid",
  "category": "Antioxidant"
  }
- ]
+ ]}
 Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingridients that have a name (named cheese or nut) but do include them if it generically just says "cheese" or "nuts". So if it says Cashew Nut -> just name it Cashew as it is abvious that it is a nut.
 """
     
@@ -115,7 +115,7 @@ Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingrid
             guard var result = (try await openAI.chats(query: query)).choices.first?.message.content else { throw AIError.json }
     
             guard let data = result.data(using: .utf8),
-               let ingredients = try? JSONDecoder().decode(AIResult.self, from: data) else {
+                  let ingredients = try? JSONDecoder().decode(AIResult.self, from: data) else {
                    throw AIError.json
             }
             

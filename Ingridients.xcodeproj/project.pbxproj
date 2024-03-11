@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A64FA2B9F64C000000641 /* Ingridient.swift */; };
 		0C0F29062B9F732000D67F61 /* IngridientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F29052B9F732000D67F61 /* IngridientsSection.swift */; };
+		0C0F29082B9F9DCF00D67F61 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F29072B9F9DCF00D67F61 /* SpinnerView.swift */; };
 		0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1F929B0D0A700B8BF9C /* OS.swift */; };
 		0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B1FC29B0D3D700B8BF9C /* AQUI */; };
 		0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		0C0A64FA2B9F64C000000641 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		0C0F29052B9F732000D67F61 /* IngridientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsSection.swift; sourceTree = "<group>"; };
+		0C0F29072B9F9DCF00D67F61 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		0C35B1F929B0D0A700B8BF9C /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
 		0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridients.swift; sourceTree = "<group>"; };
 		0C35B20329B130D400B8BF9C /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */,
 				0C0F29052B9F732000D67F61 /* IngridientsSection.swift */,
 				0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */,
+				0C0F29072B9F9DCF00D67F61 /* SpinnerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */,
 				0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */,
 				0C0F29062B9F732000D67F61 /* IngridientsSection.swift in Sources */,
+				0C0F29082B9F9DCF00D67F61 /* SpinnerView.swift in Sources */,
 				0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
