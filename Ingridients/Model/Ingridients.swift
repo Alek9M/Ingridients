@@ -61,12 +61,17 @@ class Ingridients: ObservableObject {
             
             let work = DispatchWorkItem {
                 Task {
-                    guard let result = try? await sharedAI.parseIngridients(newValue) else { return }
-                    DispatchQueue.main.async {
-                        self.ai = result.compactMap{ $0.objectified() }
+                    do {
+                        let result = try await sharedAI.parseIngridients(newValue)
+                        DispatchQueue.main.async {
+                            self.ai = result.compactMap{ $0.objectified() }
+                            self.isThinking = false
+                            self.objectWillChange.send()
+                        }
+                    } catch {
                         self.isThinking = false
-                        self.objectWillChange.send()
                     }
+                    
                 }
             }
             Ingridients.queue.asyncAfter(deadline: .now() + 2, execute: work)

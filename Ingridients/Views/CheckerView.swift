@@ -26,6 +26,7 @@ struct CheckerView: View {
             }
             
         }
+        .progress(isOn: ingridients.isThinking)
     }
     
     private var lists: some View {
