@@ -55,7 +55,7 @@ struct HighlightedAddableListSection: View {
            ingridient.count > 0,
            !ingridients.contains(ingridient)
         {
-            let ingridientsNew = ingridient.parsedIngridients.filter { !ingridients.contains($0) }
+            let ingridientsNew = Ingridients(raw: ingridient).array.filter { !ingridients.contains($0) }
             ingridients.append(contentsOf: ingridientsNew)
         }
         ingridient = nil

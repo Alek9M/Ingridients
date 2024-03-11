@@ -9,27 +9,27 @@ import SwiftUI
 
 struct ComparatorView: View {
     
-    @State private var ingridientsAraw = ""// "INGREDIENTS:Basil (48%), Sunflower Oil, Grana Padano Cheese (Cows' Milk,  Contains Preservative: Egg Lysozyme)(5%), Cashew Nuts (5%), Glucose, Potato Flakes, Vegetable Fibre, Salt, Acidity Regulator: Lactic Acid; Pecorino Romano Cheese (Sheep's Milk) (0.5%), Extra Virgin Olive Oil, Pine Nuts (0.5%), Garlic Powder, Antioxidant: Ascorbic Acid."
-    @State private var ingridientsBraw = ""// "INGREDIENTS: Basil (47%), Sunflower Oil, Grana Padano Cheese (5%) [Grana Padano Cheese (Milk), Preservative (Egg Lysozyme)], Yogurt (Milk), Cashew Nut (5%), Extra Virgin Olive Oil, Sugar, Pecorino Romano Cheese (Milk), Pea Fibre, Salt, Pine Nuts (1%), Acidity Regulator (Lactic Acid), Garlic Powder."
+    @State private var ingridientsA = Ingridients(raw: "") // "INGREDIENTS:Basil (48%), Sunflower Oil, Grana Padano Cheese (Cows' Milk,  Contains Preservative: Egg Lysozyme)(5%), Cashew Nuts (5%), Glucose, Potato Flakes, Vegetable Fibre, Salt, Acidity Regulator: Lactic Acid; Pecorino Romano Cheese (Sheep's Milk) (0.5%), Extra Virgin Olive Oil, Pine Nuts (0.5%), Garlic Powder, Antioxidant: Ascorbic Acid."
+    @State private var ingridientsB = Ingridients(raw: "") // "INGREDIENTS: Basil (47%), Sunflower Oil, Grana Padano Cheese (5%) [Grana Padano Cheese (Milk), Preservative (Egg Lysozyme)], Yogurt (Milk), Cashew Nut (5%), Extra Virgin Olive Oil, Sugar, Pecorino Romano Cheese (Milk), Pea Fibre, Salt, Pine Nuts (1%), Acidity Regulator (Lactic Acid), Garlic Powder."
     
     @State private var settings = false
     
-    private var same: [String] {
-        ingridientsAraw.intersect(with: ingridientsBraw)
+    private var same: [Ingridient] {
+        ingridientsA.intersect(with: ingridientsB)
     }
     
-    private var uniqueToA: [String] {
-        ingridientsBraw.isEmpty ? [] : ingridientsAraw.notFound(within: ingridientsBraw)
+    private var uniqueToA: [Ingridient] {
+        ingridientsB.raw.isEmpty ? [] : ingridientsA.notFound(within: ingridientsB)
     }
     
-    private var uniqueToB: [String] {
-        ingridientsAraw.isEmpty ? [] : ingridientsBraw.notFound(within: ingridientsAraw)
+    private var uniqueToB: [Ingridient] {
+        ingridientsA.raw.isEmpty ? [] : ingridientsB.notFound(within: ingridientsA)
     }
     
-    private func section(title: LocalizedStringKey, ingridients: [String]) -> some View {
+    private func section(title: LocalizedStringKey, ingridients: [Ingridient]) -> some View {
         return Section(title) {
             ForEach(ingridients) { ingridient in
-                Text(ingridient.presentable)
+                Text(ingridient.title.presentable)
             }
             .if(OS.isMacOS) {
                 $0
@@ -50,8 +50,8 @@ struct ComparatorView: View {
     private var mobile: some View {
         Group {
             
-            IngridientsSection(title: SectionName.a.rawValue, ingridientsRaw: $ingridientsAraw)
-            IngridientsSection(title: SectionName.b.rawValue, ingridientsRaw: $ingridientsBraw)
+            IngridientsSection(title: SectionName.a.rawValue, ingridients: $ingridientsA)
+            IngridientsSection(title: SectionName.b.rawValue, ingridients: $ingridientsB)
             
             if same.count > 0 {
                 section(title: SectionName.same.rawValue, ingridients: same)
@@ -71,7 +71,7 @@ struct ComparatorView: View {
         ScrollView {
             VStack {
                 HStack {
-                    IngridientsSection(title: SectionName.a.rawValue, ingridientsRaw: $ingridientsAraw)
+                    IngridientsSection(title: SectionName.a.rawValue, ingridients: $ingridientsA)
                     
                     VStack(alignment: .leading) {
                         section(title: SectionName.same.rawValue, ingridients: same)
@@ -79,7 +79,7 @@ struct ComparatorView: View {
                             .fixedSize()
                     }
                     
-                    IngridientsSection(title: SectionName.b.rawValue, ingridientsRaw: $ingridientsBraw)
+                    IngridientsSection(title: SectionName.b.rawValue, ingridients: $ingridientsB)
                 }
                 HStack {
                     VStack(alignment: .leading) {
@@ -87,6 +87,7 @@ struct ComparatorView: View {
                             .orSpacer(uniqueToA.count > 0)
                             .fixedSize()
                     }
+                    Spacer()
                     VStack(alignment: .leading) {
                         section(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
                             .orSpacer(uniqueToB.count > 0)

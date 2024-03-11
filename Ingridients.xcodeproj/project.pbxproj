@@ -25,7 +25,6 @@
 		0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDF29AC34A100357CCB /* CheckerView.swift */; };
 		0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */; };
 		0C88DCE429AC3D0900357CCB /* ConditionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */; };
-		0C8A443F2B9E5ECC00665D66 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0C8A443E2B9E5ECC00665D66 /* OpenAIKit */; };
 		0C9B1C8329BE8FFB003A3D35 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8229BE8FFB003A3D35 /* StoreProtocol.swift */; };
 		0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8429BE9066003A3D35 /* ProductCard.swift */; };
 		0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8629C2A107003A3D35 /* Sainsburys.swift */; };
@@ -95,7 +94,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */,
-				0C8A443F2B9E5ECC00665D66 /* OpenAIKit in Frameworks */,
 				0CF330D42B9A361E00384EF3 /* OpenAI in Frameworks */,
 				0C35B20229B12FFA00B8BF9C /* SwiftSoup in Frameworks */,
 			);
@@ -254,7 +252,6 @@
 				0C35B1FC29B0D3D700B8BF9C /* AQUI */,
 				0C35B20129B12FFA00B8BF9C /* SwiftSoup */,
 				0CF330D32B9A361E00384EF3 /* OpenAI */,
-				0C8A443E2B9E5ECC00665D66 /* OpenAIKit */,
 			);
 			productName = Ingridients;
 			productReference = 0C88DCAB29AB9F1E00357CCB /* Ingridients.app */;
@@ -564,12 +561,12 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akrp9.Ingridients;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -602,12 +599,12 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akrp9.Ingridients;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -803,11 +800,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
-		};
-		0C8A443E2B9E5ECC00665D66 /* OpenAIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0C8A443D2B9E5ECC00665D66 /* XCRemoteSwiftPackageReference "openai-kit" */;
-			productName = OpenAIKit;
 		};
 		0CF330D32B9A361E00384EF3 /* OpenAI */ = {
 			isa = XCSwiftPackageProductDependency;

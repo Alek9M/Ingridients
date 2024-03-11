@@ -10,15 +10,15 @@ import OpenAI
 
 class AI {
     
-    struct AIResult: Codable {
-        let ingredients: [Ingridient]
+    private struct AIResult: Codable {
+        let ingredients: [AIIngridient]
     }
     
-    struct Ingridient: Codable {
+    private struct AIIngridient: Codable {
         let ingredient: String
         let percentage: Double?
         let category: String?
-        let subingredients: [Ingridient]?
+        let subingredients: [AIIngridient]?
     }
     
     enum AIError: Error {
@@ -33,11 +33,13 @@ You are an ingridients parser. The text is scaned from picture so some letters m
  {
  "ingridient": "Basil",
  "percentage": 47,
- "category": "Herb"
+ "category": "Herb",
+ "origin": "Basil (47%)"
  },
  {
  "ingridient": "Sunflower Oil",
- "category": "Oil"
+ "category": "Oil",
+ "origin": "Sunflower Oil"
  },
  {
  "ingridient": "Grana Padano",
@@ -51,12 +53,13 @@ You are an ingridients parser. The text is scaned from picture so some letters m
  {
  "ingridient": "Egg Lysozyme",
  "category": "Preservative"
+ }
+ ],
+ origin: "Grana Padano Cheese (5%) [Grana Padano Cheese (Milk), Preservative (Egg Lysozyme)]"
  },
  {
  "ingridient": "Yogurt",
  "category": "Milk"
- }
- ]
  },
  {
  "ingridient": "Cashew",
@@ -112,7 +115,7 @@ Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingrid
             
 //            let ingredients = try decoder.decode([Ingridient].self, from: data)
     
-            return ingredients.ingredients
+            return [] //ingredients.ingredients
         }
     
     

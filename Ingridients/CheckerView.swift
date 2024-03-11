@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CheckerView: View {
     
-    @State private var ingridientsRaw = ""
+    @State private var ingridients = Ingridients(raw: "")
     @State private var settings = false
     
     
     private var content: some View {
         Group {
-            IngridientsSection(title: "Ingridients", ingridientsRaw: $ingridientsRaw)
+            IngridientsSection(title: "Ingridients", ingridients: $ingridients)
             
             if OS.isMacOS{
                 HStack {
@@ -60,19 +60,10 @@ struct CheckerView: View {
     }
     
     private func found(_ ingridient: String) -> Bool {
-        return contains(ingridient) || similar(ingridient)
+        return ingridients.contains(ingridient) || ingridients.similar(ingridient)
     }
     
-    private func contains(_ ingridient: String) -> Bool {
-        return ingridientsRaw.parsedIngridients.contains { $0.lowercased() == ingridient.lowercased() }
-    }
     
-    private func similar(_ ingridient: String) -> Bool {
-        return ingridientsRaw.parsedIngridients.contains { raw in
-            let rawLow = raw.lowercased()
-            let ingLow = ingridient.lowercased()
-            return rawLow.hasPrefix(ingLow) || rawLow.hasSuffix(ingLow) }
-    }
 }
 
 struct CheckerView_Previews: PreviewProvider {

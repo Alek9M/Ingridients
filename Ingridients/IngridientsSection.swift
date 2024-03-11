@@ -13,37 +13,35 @@ struct IngridientsSection: View {
     
     let title: LocalizedStringKey
     
-    @Binding var ingridientsRaw: String
+    @Binding var ingridients: Ingridients
     
     @State private var detailed = false
-    @State private var works: [DispatchWorkItem] = []
-    @State private var ai = try? AI()
-    @State private var aiRaw = ""
     
     private var content: some View {
         Group {
-            TextEditor(text: $ingridientsRaw)
-                .onChange(of: ingridientsRaw) { newRaw in
-                    works.forEach({$0.cancel()})
-                    if (aiRaw != ingridientsRaw) {
-                        let work = DispatchWorkItem {
-                            Task {
-                                let result = try? await ai?.parseIngridients(ingridientsRaw)
-                                if let aiRaw = result?.map(\.ingredient).reduce("", {$0 + "," + $1}), !aiRaw.isEmpty {
-                                    DispatchQueue.main.async {
-                                        ingridientsRaw = aiRaw
-                                        self.aiRaw = aiRaw
-                                    }
-                                }
-                            }
-                        }
-                        IngridientsSection.queue.asyncAfter(deadline: .now() + 2, execute: work)
-                    }
-                    works = works.filter({!$0.isCancelled})
-                }
+            TextEditor(text: $ingridients.raw)
+//                .onChange(of: ingridients.raw) { newRaw in
+////                    works.forEach({$0.cancel()})
+////                    if (aiRaw != ingridientsRaw) {
+////                        let work = DispatchWorkItem {
+////                            Task {
+////                                let result = try? await ai?.parseIngridients(ingridientsRaw)
+//////                                if let aiRaw = result?.map(\.ingredient).reduce("", {$0 + "," + $1}), !aiRaw.isEmpty {
+//////                                    DispatchQueue.main.async {
+//////                                        ingridientsRaw = aiRaw
+//////                                        self.aiRaw = aiRaw
+//////                                        self.aiResult = result
+//////                                    }
+//////                                }
+////                            }
+////                        }
+////                        IngridientsSection.queue.asyncAfter(deadline: .now() + 2, execute: work)
+////                    }
+////                    works = works.filter({!$0.isCancelled})
+//                }
             
             if detailed {
-                ForEach(ingridientsRaw.parsedIngridients) { ingridient in
+                ForEach(ingridients.array) { ingridient in
                     Text(ingridient.description.presentable)
                         .foregroundColor(.gray)
                 }
@@ -84,10 +82,10 @@ struct IngridientsSection: View {
     }
 }
 
-struct IngridientsSection_Previews: PreviewProvider {
-    static var previews: some View {
-        Form {
-            IngridientsSection(title: "A", ingridientsRaw: .constant("wheat, rye, water"))
-        }
-    }
-}
+//struct IngridientsSection_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Form {
+//            IngridientsSection(title: "A", ingridients: Ingridients(raw: "wheat, rye, water"))
+//        }
+//    }
+//}

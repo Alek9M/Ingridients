@@ -29,7 +29,7 @@ struct ProductCard: View {
                     }
                 }
                 Text(product.ingridients.check(.Shampoo, for: .Bad).count.description)
-                Text(product.ingridients.check(.Shampoo, for: .Bad).reduce("", { $0.appending("\($1), ") }))
+                Text(product.ingridients.check(.Shampoo, for: .Bad).joined(separator: ", "))
             }
             .padding(10)
             .overlay{

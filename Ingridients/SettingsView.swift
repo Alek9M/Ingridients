@@ -28,7 +28,8 @@ struct SettingsView: View {
     }
     
     private func cloudDefaultField(_ cloudDefault: CloudDefaults, _ bind: Binding<String>) -> some View {
-        TextField(cloudDefault.description, text: bind)
+        
+        SecureField(cloudDefault.description, text: bind)
             .onChange(of: bind.wrappedValue) { newValue in
                 // Save changes to NSUbiquitousKeyValueStore
                 NSUbiquitousKeyValueStore.default.set(newValue, forKey: CloudDefaults.api.rawValue)
