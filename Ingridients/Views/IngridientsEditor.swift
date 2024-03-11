@@ -19,6 +19,7 @@ struct IngridientsEditor: View {
         Group {
             TextEditor(text: $ingridients.raw)
                 .onChange(of: ingridients.raw) { newRaw in
+                    
                 }
             
             if detailed {

@@ -11,9 +11,14 @@ struct IngridientsSection: View {
     
     let title: LocalizedStringKey
     var ingridients: [Ingridient]
+    @Binding var loading: Bool
     
     var body: some View {
         Section(title) {
+//            if loading {
+//                ProgressView(value: 0.5)
+//                    .progressViewStyle(.circular)
+//            }
             ForEach(ingridients) { ingridient in
                 Text(ingridient.title.presentable)
             }

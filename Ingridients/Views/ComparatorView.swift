@@ -41,15 +41,15 @@ struct ComparatorView: View {
             IngridientsEditor(title: SectionName.b.rawValue, ingridients: $ingridientsB)
             
             if same.count > 0 {
-                IngridientsSection(title: SectionName.same.rawValue, ingridients: same)
+                IngridientsSection(title: SectionName.same.rawValue, ingridients: same, loading: .constant(false))
             }
             
             if uniqueToA.count > 0 {
-                IngridientsSection(title: SectionName.aDif.rawValue, ingridients: uniqueToA)
+                IngridientsSection(title: SectionName.aDif.rawValue, ingridients: uniqueToA, loading: $ingridientsA.thinking)
             }
             
             if uniqueToB.count > 0 {
-                IngridientsSection(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
+                IngridientsSection(title: SectionName.bDif.rawValue, ingridients: uniqueToB, loading: $ingridientsB.thinking)
             }
         }
     }
@@ -61,7 +61,7 @@ struct ComparatorView: View {
                     IngridientsEditor(title: SectionName.a.rawValue, ingridients: $ingridientsA)
                     
                     VStack(alignment: .leading) {
-                        IngridientsSection(title: SectionName.same.rawValue, ingridients: same)
+                        IngridientsSection(title: SectionName.same.rawValue, ingridients: same, loading: .constant(false))
                             .orSpacer(same.count > 0)
                             .fixedSize()
                     }
@@ -70,13 +70,13 @@ struct ComparatorView: View {
                 }
                 HStack {
                     VStack(alignment: .leading) {
-                        IngridientsSection(title: SectionName.aDif.rawValue, ingridients: uniqueToA)
+                        IngridientsSection(title: SectionName.aDif.rawValue, ingridients: uniqueToA, loading: $ingridientsA.thinking)
                             .orSpacer(uniqueToA.count > 0)
                             .fixedSize()
                     }
                     Spacer()
                     VStack(alignment: .leading) {
-                        IngridientsSection(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
+                        IngridientsSection(title: SectionName.bDif.rawValue, ingridients: uniqueToB, loading: $ingridientsB.thinking)
                             .orSpacer(uniqueToB.count > 0)
                             .fixedSize()
                     }

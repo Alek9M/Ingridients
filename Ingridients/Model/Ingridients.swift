@@ -43,20 +43,33 @@ class Ingridients {
     
     @Transient
     private var works: [DispatchWorkItem] = []
+    @Transient
     private static let queue = DispatchQueue.global(qos: .utility)
+    @Transient
+    @Published
+    var thinking = false
     
     var raw: String {
         set {
             _raw = newValue
             works.forEach({$0.cancel()})
             
+            ai = []
+            
             
             let work = DispatchWorkItem {
                 Task {
-                    guard let result = try? await AI.shared?.parseIngridients(self._raw) else { return }
+                    DispatchQueue.main.async {
+                        self.thinking = true
+                        self._raw.append(" ")
+                    }
                     
-                    DispatchQueue.main.sync {
-                        self.ai = result
+                    guard let result = try? await AI.shared?.parseIngridients(newValue) else { return }
+                    
+                    DispatchQueue.main.async {
+                        self.ai = result.compactMap{ Ingridient(title: $0.ingredient, percentage: $0.percentage, category: $0.category, subingredients: []) }
+                        self._raw.append(" ")
+                        self.thinking = false
                     }
                 }
             }
@@ -70,6 +83,7 @@ class Ingridients {
             _raw
         }
     }
+    
     var array: [String] {
         ai.count > 0 ?
         ai.map(\.title)  :
@@ -82,7 +96,8 @@ class Ingridients {
     }
     
     @Transient
-    var ai: [Ingridient] = []
+    @Published
+    @Relationship(deleteRule: .nullify) var ai: [Ingridient] = []
     
     func check(_ product: Products) -> [String] {
         return array
@@ -94,6 +109,7 @@ class Ingridients {
     
     init(raw: String) {
         self._raw = raw// Ingridients.rawProcessing(raw)
+        ai = []
     }
     
     func intersect(with string: Ingridients) -> [Ingridient] {

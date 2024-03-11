@@ -16,7 +16,7 @@ class AI {
         let ingredients: [AIIngridient]
     }
     
-    private struct AIIngridient: Codable {
+    struct AIIngridient: Codable {
         let ingredient: String
         let percentage: Double?
         let category: String?
@@ -105,7 +105,7 @@ Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingrid
         
     }
     
-        func parseIngridients(_ raw: String) async throws -> [Ingridient] {
+        func parseIngridients(_ raw: String) async throws -> [AIIngridient] {
             let query = ChatQuery(
                 model: .gpt3_5Turbo,
                 messages: [.init(role: .system, content: AI.prompt), .init(role: .user, content: raw)],
@@ -121,7 +121,7 @@ Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingrid
             
 //            let ingredients = try decoder.decode([Ingridient].self, from: data)
     
-            return ingredients.ingredients.compactMap{ $0.objectified() }
+            return ingredients.ingredients
         }
     
     
