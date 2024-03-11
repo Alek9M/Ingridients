@@ -30,9 +30,13 @@ class Ingridient {
 //        case Unknown
 //    }
     
+    var percentage: Double?
+    var category: String?
+//    var subingredients: [Ingridient] = []
+    
     let title: String
 //    let alsoKnownAs: [String]
-    let about: String
+    let about: String?
 //    let found: Found
 //    let effect: Effects
 //    let category: Category
@@ -43,13 +47,11 @@ class Ingridient {
 //        return all
 //    }
     
-    init(title: String, alsoKnownAs: [String] = [], description: String = "") {
+    init(title: String, percentage: Double? = nil, category: String? = nil, subingredients: [Ingridient]? = nil) {
         self.title = title
-//        self.alsoKnownAs = alsoKnownAs
-        self.about = description
-//        self.found = found
-//        self.effect = effect
-//        self.category = category
+        self.percentage = percentage
+        self.category = category
+//        self.subingredients = subingredients ?? []
     }
     
 //    func equals(_ ingridient: String) -> Bool {

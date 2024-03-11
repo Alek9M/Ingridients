@@ -15,6 +15,6 @@ struct IngridientsApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: [Ingridients.self, Ingridient.self])
+        .modelContainer(for: [Ingridient.self, Ingridients.self])
     }
 }

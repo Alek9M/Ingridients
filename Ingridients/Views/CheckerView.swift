@@ -15,7 +15,7 @@ struct CheckerView: View {
     
     private var content: some View {
         Group {
-            IngridientsSection(title: "Ingridients", ingridients: $ingridients)
+            IngridientsEditor(title: "Ingridients", ingridients: $ingridients)
             
             if OS.isMacOS{
                 HStack {

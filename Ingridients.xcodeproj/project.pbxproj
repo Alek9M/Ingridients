@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A64FA2B9F64C000000641 /* Ingridient.swift */; };
+		0C0F29062B9F732000D67F61 /* IngridientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F29052B9F732000D67F61 /* IngridientsSection.swift */; };
 		0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1F929B0D0A700B8BF9C /* OS.swift */; };
 		0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B1FC29B0D3D700B8BF9C /* AQUI */; };
 		0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */; };
@@ -21,7 +22,7 @@
 		0C88DCCB29AB9F2100357CCB /* IngridientsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */; };
 		0C88DCCD29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCC29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift */; };
 		0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCD929ABA3DA00357CCB /* StringExtension.swift */; };
-		0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */; };
+		0C88DCDC29ABA3F800357CCB /* IngridientsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDB29ABA3F800357CCB /* IngridientsEditor.swift */; };
 		0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */; };
 		0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDF29AC34A100357CCB /* CheckerView.swift */; };
 		0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		0C0A64FA2B9F64C000000641 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
+		0C0F29052B9F732000D67F61 /* IngridientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsSection.swift; sourceTree = "<group>"; };
 		0C35B1F929B0D0A700B8BF9C /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
 		0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridients.swift; sourceTree = "<group>"; };
 		0C35B20329B130D400B8BF9C /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsUITests.swift; sourceTree = "<group>"; };
 		0C88DCCC29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0C88DCD929ABA3DA00357CCB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsSection.swift; sourceTree = "<group>"; };
+		0C88DCDB29ABA3F800357CCB /* IngridientsEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsEditor.swift; sourceTree = "<group>"; };
 		0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorView.swift; sourceTree = "<group>"; };
 		0C88DCDF29AC34A100357CCB /* CheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerView.swift; sourceTree = "<group>"; };
 		0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedAddableListSection.swift; sourceTree = "<group>"; };
@@ -118,6 +120,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0A64FC2B9F725A00000641 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C88DCDB29ABA3F800357CCB /* IngridientsEditor.swift */,
+				0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */,
+				0C88DCDF29AC34A100357CCB /* CheckerView.swift */,
+				0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */,
+				0C0F29052B9F732000D67F61 /* IngridientsSection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0C88DCA229AB9F1E00357CCB = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +155,7 @@
 		0C88DCAD29AB9F1E00357CCB /* Ingridients */ = {
 			isa = PBXGroup;
 			children = (
+				0C0A64FC2B9F725A00000641 /* Views */,
 				0CF330CB2B9A2EBD00384EF3 /* AI */,
 				0C9B1C8829C315AB003A3D35 /* Model */,
 				0C9B1C8129BE8FBC003A3D35 /* Modifiers&Extensions */,
@@ -151,12 +166,7 @@
 				0CF330D02B9A346B00384EF3 /* Assets.xcassets */,
 				0C88DCB429AB9F2100357CCB /* Ingridients.entitlements */,
 				0C88DCB529AB9F2100357CCB /* Preview Content */,
-				0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */,
-				0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */,
-				0C88DCDF29AC34A100357CCB /* CheckerView.swift */,
 				0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */,
-				0C35B1F929B0D0A700B8BF9C /* OS.swift */,
-				0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */,
 			);
 			path = Ingridients;
 			sourceTree = "<group>";
@@ -219,6 +229,7 @@
 		0C9B1C8829C315AB003A3D35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C35B1F929B0D0A700B8BF9C /* OS.swift */,
 				0C9B1C8929C315BD003A3D35 /* Unit.swift */,
 				0C9B1C8D29C31602003A3D35 /* Product.swift */,
 				0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */,
@@ -382,7 +393,7 @@
 				0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */,
 				0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */,
 				0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */,
-				0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */,
+				0C88DCDC29ABA3F800357CCB /* IngridientsEditor.swift in Sources */,
 				0CF330C92B9A1FDD00384EF3 /* SettingsView.swift in Sources */,
 				0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */,
 				0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */,
@@ -398,6 +409,7 @@
 				0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */,
 				0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */,
 				0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */,
+				0C0F29062B9F732000D67F61 /* IngridientsSection.swift in Sources */,
 				0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

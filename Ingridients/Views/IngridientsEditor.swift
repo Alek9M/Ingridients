@@ -1,5 +1,5 @@
 //
-//  IngridientsSection.swift
+//  IngridientsEditor.swift
 //  Ingridients
 //
 //  Created by M on 26/02/2023.
@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct IngridientsSection: View {
-    
-    private static let queue = DispatchQueue.global(qos: .utility)
+struct IngridientsEditor: View {
     
     let title: LocalizedStringKey
     
@@ -20,25 +18,8 @@ struct IngridientsSection: View {
     private var content: some View {
         Group {
             TextEditor(text: $ingridients.raw)
-//                .onChange(of: ingridients.raw) { newRaw in
-////                    works.forEach({$0.cancel()})
-////                    if (aiRaw != ingridientsRaw) {
-////                        let work = DispatchWorkItem {
-////                            Task {
-////                                let result = try? await ai?.parseIngridients(ingridientsRaw)
-//////                                if let aiRaw = result?.map(\.ingredient).reduce("", {$0 + "," + $1}), !aiRaw.isEmpty {
-//////                                    DispatchQueue.main.async {
-//////                                        ingridientsRaw = aiRaw
-//////                                        self.aiRaw = aiRaw
-//////                                        self.aiResult = result
-//////                                    }
-//////                                }
-////                            }
-////                        }
-////                        IngridientsSection.queue.asyncAfter(deadline: .now() + 2, execute: work)
-////                    }
-////                    works = works.filter({!$0.isCancelled})
-//                }
+                .onChange(of: ingridients.raw) { newRaw in
+                }
             
             if detailed {
                 ForEach(ingridients.array) { ingridient in
@@ -82,10 +63,10 @@ struct IngridientsSection: View {
     }
 }
 
-//struct IngridientsSection_Previews: PreviewProvider {
+//struct IngridientsEditor_Previews: PreviewProvider {
 //    static var previews: some View {
 //        Form {
-//            IngridientsSection(title: "A", ingridients: Ingridients(raw: "wheat, rye, water"))
+//            IngridientsEditor(title: "A", ingridients: Ingridients(raw: "wheat, rye, water"))
 //        }
 //    }
 //}

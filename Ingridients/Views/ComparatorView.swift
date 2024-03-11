@@ -19,24 +19,11 @@ struct ComparatorView: View {
     }
     
     private var uniqueToA: [Ingridient] {
-        ingridientsB.raw.isEmpty ? [] : ingridientsA.notFound(within: ingridientsB)
+        ingridientsA.notFound(within: ingridientsB)
     }
     
     private var uniqueToB: [Ingridient] {
-        ingridientsA.raw.isEmpty ? [] : ingridientsB.notFound(within: ingridientsA)
-    }
-    
-    private func section(title: LocalizedStringKey, ingridients: [Ingridient]) -> some View {
-        return Section(title) {
-            ForEach(ingridients) { ingridient in
-                Text(ingridient.title.presentable)
-            }
-            .if(OS.isMacOS) {
-                $0
-                    .padding(.horizontal)
-                    .padding(.vertical, 0.5)
-            }
-        }
+        ingridientsB.notFound(within: ingridientsA)
     }
     
     enum SectionName: LocalizedStringKey {
@@ -50,19 +37,19 @@ struct ComparatorView: View {
     private var mobile: some View {
         Group {
             
-            IngridientsSection(title: SectionName.a.rawValue, ingridients: $ingridientsA)
-            IngridientsSection(title: SectionName.b.rawValue, ingridients: $ingridientsB)
+            IngridientsEditor(title: SectionName.a.rawValue, ingridients: $ingridientsA)
+            IngridientsEditor(title: SectionName.b.rawValue, ingridients: $ingridientsB)
             
             if same.count > 0 {
-                section(title: SectionName.same.rawValue, ingridients: same)
+                IngridientsSection(title: SectionName.same.rawValue, ingridients: same)
             }
             
             if uniqueToA.count > 0 {
-                section(title: SectionName.aDif.rawValue, ingridients: uniqueToA)
+                IngridientsSection(title: SectionName.aDif.rawValue, ingridients: uniqueToA)
             }
             
             if uniqueToB.count > 0 {
-                section(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
+                IngridientsSection(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
             }
         }
     }
@@ -71,25 +58,25 @@ struct ComparatorView: View {
         ScrollView {
             VStack {
                 HStack {
-                    IngridientsSection(title: SectionName.a.rawValue, ingridients: $ingridientsA)
+                    IngridientsEditor(title: SectionName.a.rawValue, ingridients: $ingridientsA)
                     
                     VStack(alignment: .leading) {
-                        section(title: SectionName.same.rawValue, ingridients: same)
+                        IngridientsSection(title: SectionName.same.rawValue, ingridients: same)
                             .orSpacer(same.count > 0)
                             .fixedSize()
                     }
                     
-                    IngridientsSection(title: SectionName.b.rawValue, ingridients: $ingridientsB)
+                    IngridientsEditor(title: SectionName.b.rawValue, ingridients: $ingridientsB)
                 }
                 HStack {
                     VStack(alignment: .leading) {
-                        section(title: SectionName.aDif.rawValue, ingridients: uniqueToA)
+                        IngridientsSection(title: SectionName.aDif.rawValue, ingridients: uniqueToA)
                             .orSpacer(uniqueToA.count > 0)
                             .fixedSize()
                     }
                     Spacer()
                     VStack(alignment: .leading) {
-                        section(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
+                        IngridientsSection(title: SectionName.bDif.rawValue, ingridients: uniqueToB)
                             .orSpacer(uniqueToB.count > 0)
                             .fixedSize()
                     }

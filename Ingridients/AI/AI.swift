@@ -10,6 +10,8 @@ import OpenAI
 
 class AI {
     
+    static private(set) var shared = try? AI()
+    
     private struct AIResult: Codable {
         let ingredients: [AIIngridient]
     }
@@ -19,6 +21,10 @@ class AI {
         let percentage: Double?
         let category: String?
         let subingredients: [AIIngridient]?
+        
+        func objectified() -> Ingridient {
+            Ingridient(title: ingredient, percentage: percentage, category: category, subingredients: subingredients?.compactMap{ $0.objectified() })
+        }
     }
     
     enum AIError: Error {
@@ -95,7 +101,7 @@ Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingrid
     init() throws {
         api = CloudDefaults.api.rawValue.fromCloud
         guard api != "" else { throw URLError(.fileDoesNotExist) }
-                openAI = OpenAI(apiToken: api)
+        openAI = OpenAI(apiToken: api)
         
     }
     
@@ -115,7 +121,7 @@ Always include ALL of the ingridients. Do NOT include "nut" or "chese" to ingrid
             
 //            let ingredients = try decoder.decode([Ingridient].self, from: data)
     
-            return [] //ingredients.ingredients
+            return ingredients.ingredients.compactMap{ $0.objectified() }
         }
     
     
