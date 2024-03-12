@@ -9,65 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     
-    enum Action {
-        case Compare
-        case CheckAgainst
-        case TescoShampoo
-        
-        var systemImage: String {
-            switch self {
-            case .Compare:
-                return "checklist"
-            case .CheckAgainst:
-                return "checklist"
-            case .TescoShampoo:
-                return "checklist"
-            }
-        }
-    }
-    
-    @State private var action = Action.Compare
+    @State private var settings = false
     
     var body: some View {
-        NavigationStack {
-            Group{
-                switch action {
-                case .Compare:
-                    ComparatorView()
-                case .CheckAgainst:
-                    CheckerView()
-                case .TescoShampoo:
-                    ProductsView()
-                }
+        TabView {
+            //            NavigationStack {
+            Group {
+                ComparatorView()
+                    .tabItem {
+                        Label("Compare", systemImage: "list.dash")
+                    }
+                CheckerView()
+                    .tabItem {
+                        Label("Check", systemImage: "checklist")
+                    }
+                
             }
             .if(OS.isMacOS) {
                 $0
                     .padding()
             }
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button(action: { toggleAction() }) {
-                        Label("Look for", systemImage: action.systemImage)
-                            .labelStyle(.iconOnly)
-                    }
-                }
-            }
             
+            
+            
+            //                ProductsView()
+            //                    .tabItem {
+            //                        Label("Compare", systemImage: "checklist")
+            //                    }
+            //            }
+        }
+        .if(OS.isMacOS) {
+            $0.settings(areShown: $settings)
         }
     }
     
-    private func toggleAction() {
-        withAnimation {
-            switch action {
-            case .Compare:
-                action = .CheckAgainst
-            case .CheckAgainst:
-                action = .TescoShampoo
-            case .TescoShampoo:
-                action = .Compare
-            }
-        }
-    }
     
     func parseString(_ input: String, separators: CharacterSet = .whitespacesAndNewlines.union(.punctuationCharacters)) -> [String] {
         return input

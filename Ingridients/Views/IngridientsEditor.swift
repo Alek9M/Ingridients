@@ -1,5 +1,5 @@
 //
-//  IngridientsSection.swift
+//  IngridientsEditor.swift
 //  Ingridients
 //
 //  Created by M on 26/02/2023.
@@ -7,20 +7,23 @@
 
 import SwiftUI
 
-struct IngridientsSection: View {
+struct IngridientsEditor: View {
     
-    let title: String
+    let title: LocalizedStringKey
     
-    @Binding var ingridientsRaw: String
+    @ObservedObject var ingridients: Ingridients
     
     @State private var detailed = false
     
     private var content: some View {
         Group {
-            TextEditor(text: $ingridientsRaw)
+            TextEditor(text: $ingridients.raw)
+//                .onChange(of: ingridients) { newRaw in
+//                    
+//                }
             
             if detailed {
-                ForEach(ingridientsRaw.parsedIngridients) { ingridient in
+                ForEach(ingridients.array) { ingridient in
                     Text(ingridient.description.presentable)
                         .foregroundColor(.gray)
                 }
@@ -35,13 +38,11 @@ struct IngridientsSection: View {
                     $0.font(.headline)
                 }
             Spacer()
-            Button(action: { withAnimation { detailed.toggle() } }) {
-                Label(detailed ? "hide" : "show", systemImage: detailed ? "chevron.down" : "chevron.right")
-                    .labelStyle(.iconOnly)
-            }
-            .if(OS.isMacOS) {
-                $0
-                    .buttonStyle(.borderless)
+            if !OS.isMacOS {
+                Button(action: { withAnimation { detailed.toggle() } }) {
+                    Label(detailed ? "hide" : "show", systemImage: detailed ? "chevron.down" : "chevron.right")
+                        .labelStyle(.iconOnly)
+                }
             }
         }
     }
@@ -63,10 +64,10 @@ struct IngridientsSection: View {
     }
 }
 
-struct IngridientsSection_Previews: PreviewProvider {
-    static var previews: some View {
-        Form {
-            IngridientsSection(title: "A", ingridientsRaw: .constant("wheat, rye, water"))
-        }
-    }
-}
+//struct IngridientsEditor_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Form {
+//            IngridientsEditor(title: "A", ingridients: Ingridients(raw: "wheat, rye, water"))
+//        }
+//    }
+//}

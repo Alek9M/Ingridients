@@ -17,14 +17,8 @@ extension String: Identifiable {
 
 extension String {
     
-    public var parsedIngridients: [String] {
-//        let separators: CharacterSet = .newlines.union(.punctuationCharacters)
-        return self
-//            .components(separatedBy: separators)
-//            .fil
-            .components(separatedBy: ",")
-            .filter { !$0.isEmpty }
-            .map { $0.presentable }
+    public var fromCloud: String {
+        NSUbiquitousKeyValueStore.default.string(forKey: self) ?? ""
     }
     
     public var presentable: String {
@@ -33,16 +27,6 @@ extension String {
         } else {
             return capitalized.trimmingCharacters(in: .whitespacesAndNewlines)
         }
-    }
-    
-    public func intersect(with string: String) -> [String] {
-        let elements = string.parsedIngridients
-        return parsedIngridients.filter { elements.contains($0) }
-    }
-    
-    public func notFound(within string: String) -> [String] {
-        let elements = string.parsedIngridients
-        return parsedIngridients.filter { !elements.contains($0) }
     }
     
     public func rangeOfFirstMatch(in string: String) -> Range<String.Index>? {

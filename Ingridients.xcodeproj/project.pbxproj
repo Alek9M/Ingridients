@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A64FA2B9F64C000000641 /* Ingridient.swift */; };
+		0C0F29062B9F732000D67F61 /* IngridientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F29052B9F732000D67F61 /* IngridientsSection.swift */; };
+		0C0F29082B9F9DCF00D67F61 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F29072B9F9DCF00D67F61 /* SpinnerView.swift */; };
 		0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1F929B0D0A700B8BF9C /* OS.swift */; };
 		0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C35B1FC29B0D3D700B8BF9C /* AQUI */; };
 		0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */; };
@@ -15,13 +18,12 @@
 		0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35B20529B1396A00B8BF9C /* Tesco.swift */; };
 		0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */; };
 		0C88DCB129AB9F1E00357CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCB029AB9F1E00357CCB /* ContentView.swift */; };
-		0C88DCB329AB9F2100357CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C88DCB229AB9F2100357CCB /* Assets.xcassets */; };
 		0C88DCB729AB9F2100357CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C88DCB629AB9F2100357CCB /* Preview Assets.xcassets */; };
 		0C88DCC129AB9F2100357CCB /* IngridientsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCC029AB9F2100357CCB /* IngridientsTests.swift */; };
 		0C88DCCB29AB9F2100357CCB /* IngridientsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */; };
 		0C88DCCD29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCCC29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift */; };
 		0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCD929ABA3DA00357CCB /* StringExtension.swift */; };
-		0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */; };
+		0C88DCDC29ABA3F800357CCB /* IngridientsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDB29ABA3F800357CCB /* IngridientsEditor.swift */; };
 		0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */; };
 		0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCDF29AC34A100357CCB /* CheckerView.swift */; };
 		0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */; };
@@ -32,6 +34,11 @@
 		0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8929C315BD003A3D35 /* Unit.swift */; };
 		0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */; };
 		0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B1C8D29C31602003A3D35 /* Product.swift */; };
+		0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */; };
+		0CF330C92B9A1FDD00384EF3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */; };
+		0CF330CD2B9A2ED900384EF3 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF330CC2B9A2ED900384EF3 /* AI.swift */; };
+		0CF330D12B9A346B00384EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF330D02B9A346B00384EF3 /* Assets.xcassets */; };
+		0CF330D42B9A361E00384EF3 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF330D32B9A361E00384EF3 /* OpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0A64FA2B9F64C000000641 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
+		0C0F29052B9F732000D67F61 /* IngridientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsSection.swift; sourceTree = "<group>"; };
+		0C0F29072B9F9DCF00D67F61 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		0C35B1F929B0D0A700B8BF9C /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
 		0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridients.swift; sourceTree = "<group>"; };
 		0C35B20329B130D400B8BF9C /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
@@ -59,7 +69,6 @@
 		0C88DCAB29AB9F1E00357CCB /* Ingridients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ingridients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsApp.swift; sourceTree = "<group>"; };
 		0C88DCB029AB9F1E00357CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0C88DCB229AB9F2100357CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C88DCB429AB9F2100357CCB /* Ingridients.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ingridients.entitlements; sourceTree = "<group>"; };
 		0C88DCB629AB9F2100357CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C88DCBC29AB9F2100357CCB /* IngridientsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IngridientsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +77,7 @@
 		0C88DCCA29AB9F2100357CCB /* IngridientsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsUITests.swift; sourceTree = "<group>"; };
 		0C88DCCC29AB9F2100357CCB /* IngridientsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0C88DCD929ABA3DA00357CCB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsSection.swift; sourceTree = "<group>"; };
+		0C88DCDB29ABA3F800357CCB /* IngridientsEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsEditor.swift; sourceTree = "<group>"; };
 		0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorView.swift; sourceTree = "<group>"; };
 		0C88DCDF29AC34A100357CCB /* CheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerView.swift; sourceTree = "<group>"; };
 		0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedAddableListSection.swift; sourceTree = "<group>"; };
@@ -79,6 +88,10 @@
 		0C9B1C8929C315BD003A3D35 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		0C9B1C8B29C315E5003A3D35 /* SuperStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStore.swift; sourceTree = "<group>"; };
 		0C9B1C8D29C31602003A3D35 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0CF330CC2B9A2ED900384EF3 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
+		0CF330D02B9A346B00384EF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C35B1FD29B0D3D700B8BF9C /* AQUI in Frameworks */,
+				0CF330D42B9A361E00384EF3 /* OpenAI in Frameworks */,
 				0C35B20229B12FFA00B8BF9C /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +122,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0A64FC2B9F725A00000641 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C88DCDB29ABA3F800357CCB /* IngridientsEditor.swift */,
+				0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */,
+				0C88DCDF29AC34A100357CCB /* CheckerView.swift */,
+				0CF330C82B9A1FDD00384EF3 /* SettingsView.swift */,
+				0C0F29052B9F732000D67F61 /* IngridientsSection.swift */,
+				0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */,
+				0C0F29072B9F9DCF00D67F61 /* SpinnerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0C88DCA229AB9F1E00357CCB = {
 			isa = PBXGroup;
 			children = (
@@ -131,20 +159,17 @@
 		0C88DCAD29AB9F1E00357CCB /* Ingridients */ = {
 			isa = PBXGroup;
 			children = (
+				0C0A64FC2B9F725A00000641 /* Views */,
+				0CF330CB2B9A2EBD00384EF3 /* AI */,
 				0C9B1C8829C315AB003A3D35 /* Model */,
 				0C9B1C8129BE8FBC003A3D35 /* Modifiers&Extensions */,
 				0C9B1C8029BE8F83003A3D35 /* StoresView */,
 				0C9B1C7F29BE8F63003A3D35 /* StoresAPI */,
 				0C88DCAE29AB9F1E00357CCB /* IngridientsApp.swift */,
 				0C88DCB029AB9F1E00357CCB /* ContentView.swift */,
-				0C88DCB229AB9F2100357CCB /* Assets.xcassets */,
+				0CF330D02B9A346B00384EF3 /* Assets.xcassets */,
 				0C88DCB429AB9F2100357CCB /* Ingridients.entitlements */,
 				0C88DCB529AB9F2100357CCB /* Preview Content */,
-				0C88DCDB29ABA3F800357CCB /* IngridientsSection.swift */,
-				0C88DCDD29AC31CA00357CCB /* ComparatorView.swift */,
-				0C88DCDF29AC34A100357CCB /* CheckerView.swift */,
-				0C88DCE129AC367B00357CCB /* HighlightedAddableListSection.swift */,
-				0C35B1F929B0D0A700B8BF9C /* OS.swift */,
 			);
 			path = Ingridients;
 			sourceTree = "<group>";
@@ -199,6 +224,7 @@
 			children = (
 				0C88DCD929ABA3DA00357CCB /* StringExtension.swift */,
 				0C88DCE329AC3D0900357CCB /* ConditionalModifiers.swift */,
+				0CF330C62B9A1EDD00384EF3 /* ViewModifiers.swift */,
 			);
 			path = "Modifiers&Extensions";
 			sourceTree = "<group>";
@@ -206,11 +232,21 @@
 		0C9B1C8829C315AB003A3D35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C35B1F929B0D0A700B8BF9C /* OS.swift */,
 				0C9B1C8929C315BD003A3D35 /* Unit.swift */,
 				0C9B1C8D29C31602003A3D35 /* Product.swift */,
 				0C35B1FE29B12BD800B8BF9C /* Ingridients.swift */,
+				0C0A64FA2B9F64C000000641 /* Ingridient.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0CF330CB2B9A2EBD00384EF3 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				0CF330CC2B9A2ED900384EF3 /* AI.swift */,
+			);
+			path = AI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +268,7 @@
 			packageProductDependencies = (
 				0C35B1FC29B0D3D700B8BF9C /* AQUI */,
 				0C35B20129B12FFA00B8BF9C /* SwiftSoup */,
+				0CF330D32B9A361E00384EF3 /* OpenAI */,
 			);
 			productName = Ingridients;
 			productReference = 0C88DCAB29AB9F1E00357CCB /* Ingridients.app */;
@@ -308,6 +345,9 @@
 			packageReferences = (
 				0C35B1FB29B0D3D700B8BF9C /* XCRemoteSwiftPackageReference "AQUI" */,
 				0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				0CF330CA2B9A2E3D00384EF3 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+				0CF330D22B9A35BC00384EF3 /* XCRemoteSwiftPackageReference "OpenAI" */,
+				0C8A443D2B9E5ECC00665D66 /* XCRemoteSwiftPackageReference "openai-kit" */,
 			);
 			productRefGroup = 0C88DCAC29AB9F1E00357CCB /* Products */;
 			projectDirPath = "";
@@ -325,8 +365,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF330D12B9A346B00384EF3 /* Assets.xcassets in Resources */,
 				0C88DCB729AB9F2100357CCB /* Preview Assets.xcassets in Resources */,
-				0C88DCB329AB9F2100357CCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +393,11 @@
 			files = (
 				0C35B1FF29B12BD800B8BF9C /* Ingridients.swift in Sources */,
 				0C88DCE029AC34A100357CCB /* CheckerView.swift in Sources */,
+				0C0A64FB2B9F64C000000641 /* Ingridient.swift in Sources */,
 				0C88DCE229AC367B00357CCB /* HighlightedAddableListSection.swift in Sources */,
-				0C88DCDC29ABA3F800357CCB /* IngridientsSection.swift in Sources */,
+				0CF330C72B9A1EDD00384EF3 /* ViewModifiers.swift in Sources */,
+				0C88DCDC29ABA3F800357CCB /* IngridientsEditor.swift in Sources */,
+				0CF330C92B9A1FDD00384EF3 /* SettingsView.swift in Sources */,
 				0C35B20629B1396A00B8BF9C /* Tesco.swift in Sources */,
 				0C9B1C8A29C315BD003A3D35 /* Unit.swift in Sources */,
 				0C88DCE429AC3D0900357CCB /* ConditionalModifiers.swift in Sources */,
@@ -364,10 +407,13 @@
 				0C88DCAF29AB9F1E00357CCB /* IngridientsApp.swift in Sources */,
 				0C9B1C8E29C31602003A3D35 /* Product.swift in Sources */,
 				0C88DCDA29ABA3DA00357CCB /* StringExtension.swift in Sources */,
+				0CF330CD2B9A2ED900384EF3 /* AI.swift in Sources */,
 				0C9B1C8729C2A107003A3D35 /* Sainsburys.swift in Sources */,
 				0C35B1FA29B0D0A800B8BF9C /* OS.swift in Sources */,
 				0C88DCDE29AC31CA00357CCB /* ComparatorView.swift in Sources */,
 				0C9B1C8C29C315E5003A3D35 /* SuperStore.swift in Sources */,
+				0C0F29062B9F732000D67F61 /* IngridientsSection.swift in Sources */,
+				0C0F29082B9F9DCF00D67F61 /* SpinnerView.swift in Sources */,
 				0C9B1C8529BE9066003A3D35 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +573,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ingredients;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -535,12 +583,12 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akrp9.Ingridients;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,6 +613,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ingredients;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -573,12 +623,12 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akrp9.Ingridients;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -738,6 +788,30 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		0C8A443D2B9E5ECC00665D66 /* XCRemoteSwiftPackageReference "openai-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dylanshine/openai-kit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+		0CF330CA2B9A2E3D00384EF3 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		0CF330D22B9A35BC00384EF3 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -750,6 +824,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C35B20029B12FFA00B8BF9C /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		0CF330D32B9A361E00384EF3 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CF330D22B9A35BC00384EF3 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
